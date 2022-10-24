@@ -3,9 +3,12 @@
         "browser": true,
         "es2021": true
     },
-    "extends": "plugin:react/recommended",
-    "overrides": [
+    "extends": [
+        "plugin:react/recommended",
+        "prettier",
+        "airbnb-typescript"
     ],
+    "overrides": [],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
         "ecmaVersion": "latest"
@@ -14,6 +17,5 @@
         "react",
         "@typescript-eslint"
     ],
-    "rules": {
-    }
+    "rules": {}
 }
