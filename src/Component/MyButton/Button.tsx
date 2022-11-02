@@ -11,6 +11,7 @@ export const Button = (props: any) => {
             disabled={data.disabled}
             className={data.styles}
         >
+
             {data.img}
             {data.content}
         </button>
