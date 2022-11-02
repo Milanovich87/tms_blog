@@ -1,0 +1,7 @@
+.dislike{
+        fill: #4C4B5E;
+        padding: 17px 33px;
+        &:not([disabled]):hover {
+            fill: #FFFFFF;
+        }
+    }

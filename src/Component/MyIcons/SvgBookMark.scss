@@ -1,0 +1,8 @@
+.bookmark {
+    fill: #313037;
+    margin-right: 14px;
+    &:not([disabled]):hover {
+        fill: #FFFFFF;
+    }
+}
+

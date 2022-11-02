@@ -1,0 +1,86 @@
+.btn {
+    font-size: 18px;
+    border-radius: 2px;
+    text-align: center;
+    border: none;
+    transition: 0.4s;
+    padding: 16px 32px;
+    display: flex;
+    align-items: center;
+        &:disabled {
+                background-color: rgb(223, 222, 222);
+                color: rgba(0, 0, 0);
+                opacity: 0.5;
+            }
+}
+
+.button-primary {
+    color: #FFFFFF;
+    background: #2231AA;
+    &:not([disabled]):hover{
+        background: #5360CD;
+    }
+}
+
+.button-secondary{
+    background: #E8E8E8;
+    color: #313037;
+    &:not([disabled]):hover {
+        background: #DADADA;
+    }
+}
+
+.button-secondary2 {
+    background: #FFFFFF;
+        color: #FD3419;
+    &:not([disabled]):hover {
+        border: 1px solid #DADADA;
+    }
+    &:disabled {
+        border: none;
+        background-color: rgb(250, 250, 250);
+    }
+}
+
+.button-dis-like {
+    border-radius: 2px;
+        text-align: center;
+        border: none;
+        transition: 0.4s;
+        display: flex;
+        align-items: center;
+    &:not([disabled]):hover {
+        background: #FD3419;
+    }
+    &:disabled {
+        background-color: rgb(223, 222, 222);
+        color: rgba(0, 0, 0);
+        opacity: 0.5;
+    }
+}
+
+.button-like {
+    border-radius: 2px;
+        text-align: center;
+        border: none;
+        transition: 0.4s;
+        display: flex;
+        align-items: center;
+    &:not([disabled]):hover {
+        background: #5360CD;
+    }
+    &:disabled {
+        background-color: rgb(223, 222, 222);
+        color: rgba(0, 0, 0);
+        opacity: 0.5;
+    }
+}
+
+.button-book-mark {
+    background: #E8E8E8;
+        color: #313037;
+    &:not([disabled]):hover {
+        background: #5360CD;
+        color: #FFFFFF;
+    }
+}

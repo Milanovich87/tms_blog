@@ -1,10 +1,17 @@
 import React from 'react'
+import './Buttons.scss'
+
 
 export const Button = (props: any) => {
-    const data = props
+    const data = props.prop
 
     return (
-        <button onClick={props.func} disabled={props.disabled}>
+        <button
+            onClick={data.active}
+            disabled={data.disabled}
+            className={data.styles}
+        >
+            {data.img}
             {data.content}
         </button>
     )
