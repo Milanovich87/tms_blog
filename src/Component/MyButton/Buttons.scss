@@ -1,44 +1,50 @@
+@import '../styles/variables';
+@import '../styles/fonts';
+
 .btn {
-    font-size: 18px;
+    font-family: InterSemiBold, sans-serif;
+    font-size: $font-size-headline-3-desktop;
     border-radius: 2px;
     text-align: center;
     border: none;
     transition: 0.4s;
-    padding: 16px 32px;
     display: flex;
     align-items: center;
         &:disabled {
-                background-color: rgb(223, 222, 222);
-                color: rgba(0, 0, 0);
+                background-color: $color-light;
+                color: $color-background-primary;
                 opacity: 0.5;
             }
 }
 
 .button-primary {
-    color: #FFFFFF;
-    background: #2231AA;
+    padding: 16px 32px;
+    color: $color-white;
+    background: $color-primary;
     &:not([disabled]):hover{
-        background: #5360CD;
+        background: $color-primary2;
     }
 }
 
 .button-secondary{
-    background: #E8E8E8;
-    color: #313037;
+    padding: 16px 32px;
+    background: $color-background-primary;
+    color: $color-secondary;
     &:not([disabled]):hover {
-        background: #DADADA;
+        background: $color-light;
     }
 }
 
 .button-secondary2 {
-    background: #FFFFFF;
-        color: #FD3419;
+    padding: 16px 32px;
+    background: $color-white;
+        color: $color-error;
     &:not([disabled]):hover {
-        border: 1px solid #DADADA;
+        border: 1px solid $color-background-primary2;
     }
     &:disabled {
         border: none;
-        background-color: rgb(250, 250, 250);
+        background-color: $color-light;
     }
 }
 
@@ -50,11 +56,11 @@
         display: flex;
         align-items: center;
     &:not([disabled]):hover {
-        background: #FD3419;
+        background: $color-error;
     }
     &:disabled {
-        background-color: rgb(223, 222, 222);
-        color: rgba(0, 0, 0);
+        background-color: $color-light;
+        color: $color-background-primary;
         opacity: 0.5;
     }
 }
@@ -70,17 +76,18 @@
         background: #5360CD;
     }
     &:disabled {
-        background-color: rgb(223, 222, 222);
-        color: rgba(0, 0, 0);
+        background-color: $color-background-primary2;
+        color: $color-background-primary;
         opacity: 0.5;
     }
 }
 
 .button-book-mark {
-    background: #E8E8E8;
-        color: #313037;
+    padding: 16px 32px;
+    background: $color-light;
+        color: $color-secondary;
     &:not([disabled]):hover {
-        background: #5360CD;
-        color: #FFFFFF;
+        background: $color-primary2;
+        color: $color-white;
     }
 }

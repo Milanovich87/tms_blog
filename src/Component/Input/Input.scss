@@ -1,0 +1,59 @@
+@import '../styles/variables';
+@import '../styles/fonts';
+
+.input {
+    width: 544px;
+    font-family: InterRegular, sans-serif;
+    font-size: $font-size-subline-1;
+    line-height: 20px;
+    align-items: flex-start;
+
+    &__label {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        color: $color-secondary;
+        margin-top: $indent-xl;
+    }
+
+    &__input {
+        font-family: InterRegular, sans-serif;
+        font-size: $font-size-subline-1;
+        padding: 18px 20px;
+        background-color: $color-white;
+        color: $color-background-primary;
+        outline: 2px solid transparent;
+        border: 0;
+        border-radius: 2px;
+        width: 100%;
+    }
+
+    &__input:focus {
+        outline-color: $color-background-primary2;
+    }
+
+    &__input:disabled {
+        outline-color: $color-background-primary2;
+        cursor: not-allowed;
+        background-color: $color-light;
+    }
+
+    &__input--error,
+    &__input--error:focus {
+        outline-color: $color-error;
+    }
+
+    &__label~&__input {
+        margin-top: 8px;
+    }
+
+    &__input~&__error {
+        margin-top: $indent-xs;
+    }
+
+    &__error {
+        display: block;
+        color: $color-error;
+        display: flex;
+    }
+}
