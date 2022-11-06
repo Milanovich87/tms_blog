@@ -65,7 +65,7 @@
     }
 }
 
-.button-like {
+.button-like  {
     border-radius: 2px;
         text-align: center;
         border: none;
@@ -90,4 +90,23 @@
         background: $color-primary2;
         color: $color-white;
     }
+}
+
+.btn-book-mark{
+    border-radius: 2px;
+        text-align: center;
+        border: none;
+        transition: 0.4s;
+        display: flex;
+        align-items: center;
+    
+        &:not([disabled]):hover {
+            background: #5360CD;
+        }
+    
+        &:disabled {
+            background-color: $color-background-primary2;
+            color: $color-background-primary;
+            opacity: 0.5;
+        }
 }

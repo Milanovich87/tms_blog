@@ -1,9 +1,12 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React from 'react';
 import { Button } from '../MyButton/Button';
 import './App.scss';
 import { Input } from '../Input/input';
 import { dataButtons } from '../MyButton/Button';
 import { dataInput } from '../Input/input';
+import { Card } from '../Card/Card';
 
 export const App = () => {
 
@@ -45,6 +48,12 @@ export const App = () => {
               />
             ))}
           </form>
+        </div>
+        <div className="cards">
+          <Card />
+          <Card />
+          <Card />
+          <Card />
         </div>
       </div>
     </div >

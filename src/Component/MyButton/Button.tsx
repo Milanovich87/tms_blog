@@ -4,13 +4,19 @@ import { SvgDisLike } from '../MyIcons/SvgDisLike';
 import { SvgLike } from '../MyIcons/SvgLike';
 import { SvgBookMark } from '../MyIcons/SvgBooMark';
 
+
+
 type ButtonProps = {
+    type?: string
+    link?: string
     text?: string
     disabled?: boolean
-    onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void
+    onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void
     className: string
     icon?: ReactElement
     alt?: string
+    count?: any
+    children?: any
 }
 
 export const dataButtons: ButtonProps[] = [
@@ -28,11 +34,11 @@ export const dataButtons: ButtonProps[] = [
     },
     {
         icon: <SvgDisLike />,
-        className: 'button-dis-like'
+        className: 'button-dis-like',
     },
     {
         icon: <SvgLike />,
-        className: 'button-like'
+        className: 'button-like',
     },
     {
         text: 'Button with icon',
@@ -41,22 +47,33 @@ export const dataButtons: ButtonProps[] = [
     },
 ]
 
+
 export const Button = ({
     text,
+    type = 'button',
+    link,
+    children,
     disabled = false,
     onClick,
     className,
     icon,
+    count,
     ...rest
 }: ButtonProps & ButtonHTMLAttributes<HTMLButtonElement>) => {
+
     return (
         <button
             className={`btn ${className}`}
             disabled={disabled}
             onClick={onClick}
+            type={type}
+
             {...rest}
         >
             {icon}
+            {link}
+            {count}
+            {children}
             {text && <span className="button__text">{text}</span>}
         </button >
     )
