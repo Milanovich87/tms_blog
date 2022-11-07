@@ -6,7 +6,10 @@ import './App.scss';
 import { Input } from '../Input/input';
 import { dataButtons } from '../MyButton/Button';
 import { dataInput } from '../Input/input';
-import { Card } from '../Card/Card';
+import { Card } from '../Card/Card.data';
+import { CardMain } from '../Card/Card';
+import { dataCard } from '../Card/Card.data';
+import { Blog } from '../Blog/Blog';
 
 export const App = () => {
 
@@ -49,11 +52,8 @@ export const App = () => {
             ))}
           </form>
         </div>
-        <div className="cards">
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+        <div className="blog">
+          <Blog />
         </div>
       </div>
     </div >

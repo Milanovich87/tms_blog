@@ -6,6 +6,9 @@
     height: 100vh;
     background-color: $color-background-main;
 }
+.wrapper{
+    background-color: $color-background-main;
+}
 
 .buttons {
     max-width: 1000px;
@@ -38,8 +41,14 @@
     }
 }
 
-.cards {
-    width: 100%;
-    padding: 50px;
+// .cards {
+//     width: 100%;
+//     padding: 50px;
+//     background-color: $color-background-main;
+// }
+
+.blog{
+    max-width: 1120px;
+    margin: 0 auto;
     background-color: $color-background-main;
 }

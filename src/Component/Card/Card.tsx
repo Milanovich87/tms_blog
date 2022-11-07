@@ -7,12 +7,13 @@ import { SvgBookMark } from '../MyIcons/SvgBooMark';
 import { IconMore } from '../MyIcons/IconMore'
 import { Image } from '../Image/Image'
 // @ts-ignore-start
-import photo from '../../assets/images/Astronaut.jpg'
+import SpaceBig from '../../assets/images/SpaceBig.jpg'
 // @ts-ignore-end
 import './Card.scss'
 
 interface CardType {
     className?: string
+    variant?: string
 }
 
 interface dataCardtype {
@@ -21,9 +22,10 @@ interface dataCardtype {
     title: string
     date: string
     text: string
+    variant?: string
 }
 
-export const Card = ({ className }: CardType) => {
+export const CardMain = ({ variant, className }: CardType) => {
     const date = new Date()
     const id = date.getTime()
     const year = date.getFullYear()
@@ -33,7 +35,8 @@ export const Card = ({ className }: CardType) => {
 
     const dataCard: dataCardtype = {
         id,
-        image: photo,
+        variant,
+        image: SpaceBig,
         title: 'Astronauts prep for new solar arrays on nearly seven-hour spacewalk',
         date: ` ${nameMonth[month]} ${day < 10 ? '0' + day : day}, ${year}`,
         text: 'Astronauts Kayla Barron and Raja Chari floated out of the International Space Station airlock for a spacewalk Tuesday, installing brackets and struts to support new solar arrays to upgrade the research lab’s power system on the same day that crewmate Mark Vande Hei marked his 341st day in orbit, a U.S. record for a single spaceflight.',
@@ -47,7 +50,7 @@ export const Card = ({ className }: CardType) => {
     const countstr2 = count2 === 0 ? ' ' : count2
 
     return (
-        <div className={`card ${className ? className : ''}`}>
+        <div className={`card__${variant}`}>
             <div className='card__main'>
                 <div className='card__info'>
                     <div className='card__date'>

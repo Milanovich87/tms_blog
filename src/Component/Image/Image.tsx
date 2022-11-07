@@ -1,6 +1,6 @@
 interface ImageSrc {
-    image: string
-    alt: string
+    image: string | undefined
+    alt: string | undefined
 }
 export const Image = ({ image, alt }: ImageSrc) => {
     return (
